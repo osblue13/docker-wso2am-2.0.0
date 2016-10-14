@@ -1,0 +1,12 @@
+FROM isim/oraclejava:1.7.0_80
+MAINTAINER OSBlue13
+
+RUN wget -P /opt https://osblue.blob.core.windows.net/public/wso2am-2.0.0.zip && \
+    apt-get update && \
+    apt-get install -y zip && \
+    apt-get clean && \
+    unzip /opt/wso2am-2.0.0.zip -d /opt && \
+    rm /opt/wso2am-2.0.0.zip
+
+EXPOSE 9443 9763 8243 8280 10397 7711
+ENTRYPOINT ["/opt/wso2am-2.0.0/bin/wso2server.sh"]
