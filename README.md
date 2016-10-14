@@ -2,6 +2,11 @@
 
 Docker image to install WSO2 API manager 2.0.0. Based on https://github.com/ihcsim/docker-wso2apim
 
+## Usage
+
+1. To pull: docker pull osblue13/wso2am-2.0.0
+2. To run: docker run --rm --name your_container_name -p 9443:9443 -p 9736:9736 -p 8243:8243 -p 8280:8280 -p 10397:10397 -p 7711:7711 osblue13/wso2am-2.0.0
+
 
 ## Self-hosted
 
